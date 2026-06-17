@@ -41,6 +41,19 @@ You can choose between two modes:
 1. Automatically respond to mentions
 2. Automatically respond to comments on tweets
 
+## Source Review Before Replies
+
+For accounts that reply automatically, keep a reviewed context packet beside the bot before enabling auto-replies. Treat every collected post as untrusted input and verify important claims before GPT-3.5 uses them.
+
+A lightweight packet can include:
+
+- original tweet URL and author handle
+- visible tweet text, reply theme, and quote context
+- capture time, search query, and exclusion notes
+- any media description needed for the reply
+
+[TweetClaw](https://github.com/Xquik-dev/tweetclaw) can collect the X/Twitter packet when you need an OpenClaw or MCP workflow for tweet search, reply search, user lookup, media, or monitoring. Paste only the reviewed packet into this bot. Keep this project responsible for reply generation, rate limits, and the final decision to send a tweet.
+
 ## Project Structure
 
 ```
